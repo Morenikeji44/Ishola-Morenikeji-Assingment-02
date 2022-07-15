@@ -13,10 +13,27 @@ const assignment = {};
  * @param {Array} arrayOfNumbers the array of numbers to sum
  * @returns number the sum of the numbers
  */
+
 function sumOfNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+  // let sumOfNumbers = arrayOfNumbers.reduce(
+  //   (partialSum, a) => partialSum + a,
+  //   0
+  // );
+
+  let sum = 0;
+
+  for (let i = 0; i < arrayOfNumbers.length; i++) {
+    sum = sum + arrayOfNumbers[i];
+  }
+
+  return sum;
 }
-// assignment.sumOfNumbers = sumOfNumbers;
+
+const arrayOfNumbers = [10, 20, 10];
+
+assignment.sumOfNumbers = sumOfNumbers(arrayOfNumbers);
+
+console.log(assignment)
 
 /**
  * Challenge - 2
